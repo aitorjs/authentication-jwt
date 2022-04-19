@@ -42,15 +42,15 @@ export const SECURITY_SCHEME_SPEC: SecuritySchemeObjects = {
 export class SecuritySpecEnhancer implements OASEnhancer {
   name = 'bearerAuth';
 
-  /* modifySpec(spec: OpenApiSpec): OpenApiSpec {
+  modifySpec(spec: OpenApiSpec): OpenApiSpec {
     const patchSpec = {
-      components: {
+      /* components: {
         securitySchemes: SECURITY_SCHEME_SPEC,
       },
-      security: OPERATION_SECURITY_SPEC,
+      security: OPERATION_SECURITY_SPEC, */
     };
     const mergedSpec = mergeOpenAPISpec(spec, patchSpec);
     debug(`security spec extension, merged spec: ${inspect(mergedSpec)}`);
     return mergedSpec;
-  } */
+  }
 }
