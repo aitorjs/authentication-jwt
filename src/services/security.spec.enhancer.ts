@@ -44,10 +44,10 @@ export class SecuritySpecEnhancer implements OASEnhancer {
 
   modifySpec(spec: OpenApiSpec): OpenApiSpec {
     const patchSpec = {
-      /* components: {
+      components: {
         securitySchemes: SECURITY_SCHEME_SPEC,
       },
-      security: OPERATION_SECURITY_SPEC, */
+      security: OPERATION_SECURITY_SPEC,
     };
     const mergedSpec = mergeOpenAPISpec(spec, patchSpec);
     debug(`security spec extension, merged spec: ${inspect(mergedSpec)}`);
